@@ -8,7 +8,7 @@ There are two version of code - version 0.3 is for use with "mysql_connect" conn
 This file holds your credentials - database host (server), database name, username and password.  If you want to receive email reports for the process, enter email information here too.
 
 # mysql_functions.php
-This file has a single function.  If you are using version 0.3 (mysql_connect), uncomment those lines of code and comment out the PDO lines.
+This file now has two functions, one for a PDO connection and one for 'mysql_connect.'  You should no longer have to edit this file. 
 
 # dbMaintV0-3.php
 As noted above, version three uses "mysql_connect" for your database connection.  This is an older version of the code that works with PHP 5.x and early versions of 7.x.
