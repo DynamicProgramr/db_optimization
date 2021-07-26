@@ -15,7 +15,7 @@
 	include("includes/config.php");
 	include("includes/mysql_functions.php");
 	
-	$linkID = db_connect();
+	$linkID = db_pdo();
 	
 	//global vars
 	$returnThis = "";
@@ -192,12 +192,12 @@
 					</body>
 				</html>";
 	
-	$from = $fromemail; // change this in the config.php file or just add an email in this line, ex: "service@youremaildomain.com"
+	$from = $fromEmail; // change this in the config.php file or just add an email in this line, ex: "service@youremaildomain.com"
 	$headers = "MIME-Version: 1.0\r\n";
 	$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
 	$headers  .= "From: $from\r\n";
 	$subject = "Freelance db Report - ".date("d-M-Y");
-	$toArray = array("russ@freelanceitsolutions.com", "questions@freelanceitsolutions.com");
+	$toArray = $toEmails; // change this in config.php or can be entered directly here, ex: array("email1@youremaildomain.com", "second.email@somedomain.com");
 	
 	foreach($toArray AS $value)
 	{

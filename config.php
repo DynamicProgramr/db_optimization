@@ -21,10 +21,10 @@
 	$dbname = "your_db_name";
 	
 	// use if you decide to send error message to me
-	$adminemail = "you@youremaildomain.com";
+	$toEmails = ["you@youremaildomain.com", "another.email@somedomain.com"];
 
 	// this is the email address that is placed in the "from" header for auto email
-	$fromemail = "from@youremaildomain.com";
+	$fromEmail = "from@youremaildomain.com";
 	
 	/* these are not needed in the current versions because they are not coded to be cross-domain
 	// domain name, for e-mail interception and other things

@@ -7,19 +7,20 @@
 /  Database Function Page  /
 /  ====================== */
 
-function db_connect()
+function db_connect() // connect with "mysql_connect"
 {
-
 	global $dbservername,$dbusername,$dbpassword,$dbname;
-
-	/* if using php 5.x and dbMaintV0-3.php uncomment this code and comment out the PDO code below
+	
 	$db = @mysql_pconnect($dbservername,$dbusername,$dbpassword);
 	@mysql_select_db($dbname,$db);
 	return $db;
-	*/
+	
+}
 
-	/* if using php 7.x and dbMaintV0-4.php, use this code */
-	/* for PDO connection */
+function db_pdo() // connect with pdo
+{
+	global $dbservername,$dbusername,$dbpassword,$dbname;
+
 	try
 	{
 		$db = new PDO("mysql:host=".$dbservername.";dbname=".$dbname, $dbusername, $dbpassword);
