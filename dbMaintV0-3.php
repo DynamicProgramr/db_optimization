@@ -178,7 +178,7 @@
 					</body>
 				</html>";
 	
-	$from = "service@freelanceitsolutions.com";
+	$from = $fromemail; // change this in the config.php file or just add an email in this line, ex: "service@youremaildomain.com"
 	$headers = "MIME-Version: 1.0\r\n";
 	$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
 	$headers  .= "From: $from\r\n";
